@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: #000;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+
+            color: #fff;
+            background: none;
+            border: 1px solid #fff;
+            font-size: 40px;
+
+            padding: 40px 80px;
+
+            position: relative;
+
+            z-index: 1;
+
+        }
+
+        button::before {
+            content: "";
+            background:linear-gradient(
+                90deg,
+                red 50%,
+                transparent 70% 100%
+            );
+
+            width: 100%;
+            height: 100%;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            z-index: -1;
+
+            /* transition: all .5s; */
+
+        }
+
+        button::after {
+            content: "";
+            background:linear-gradient(
+                270deg,
+                blue 40%,
+                transparent 70% 100%
+            );
+
+            width: 100%;
+            height: 100%;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            z-index: -1;
+
+            /* transition: background .5s; doesn't work in linear-gradient  */
+
+        }
+
+        button:hover::before{
+          background: linear-gradient(
+            270deg,
+            red 50%,
+            transparent 70% 100%
+
+          );  
+        }
+
+        button:hover::after{
+          background: linear-gradient(
+            90deg,
+            blue 40%,
+            transparent 70% 100%
+
+          );  
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <button type="button">Hover Me</button>
+</body>
+
+</html>
