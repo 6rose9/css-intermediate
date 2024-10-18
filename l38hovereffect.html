@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <style>
+        body {
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            background: steelblue;
+            border: 5px solid #000;
+            font-size: 40px;
+
+            padding: 40px 80px;
+
+            position: relative;
+            
+        }
+
+        button::before{
+            content:"Thank You";
+            color: #fff;
+            background-color: skyblue;
+
+            width: 100%;
+            height: 100%;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            display: grid;
+            place-items: center;
+
+            transform: rotateX(90deg);
+            transition: transform 1s;
+
+        }
+
+        button:hover::before{
+            transform: rotateX(0);
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <button type="button">Hover Me</button>
+</body>
+
+</html>
