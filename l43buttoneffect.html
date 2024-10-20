@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Effect</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+        body {
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn{
+            background: none;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: none;
+            padding: 25px 80px;
+            cursor: pointer;
+
+            position: relative;
+
+        }
+
+        .btn-download{
+            background-color: steelblue;
+            margin-right: 30px;
+        }
+
+        .btn-upload{
+            background-color: rgb(234, 81, 81);
+        }
+
+        .btn::before{
+            content: "";
+            font-family: "Font Awesome 6 Free";
+            width: 60px;
+            height: 100%;
+
+            font-size: 150%;
+            line-height: 3;
+
+            position: absolute;           
+            top: 0;
+            left: 0;
+        }
+
+        .btn-download::before{
+            content: "\f0ed";
+           
+            background-color: skyblue;
+        }
+
+        .btn-upload::before{
+            content: "\f0ee";
+            background-color: red;
+        }
+
+        .btn-download:hover{
+            background-color: deepskyblue;
+        }
+
+        .btn-upload:hover{
+            background-color: rgba(255, 20, 145, 0.675);
+        }
+
+        .btn-download:active{
+            background-color: rgb(9, 226, 136);
+        }
+
+        .btn-upload:active{
+            background-color: rgb(205, 11, 114);
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <button type="button" class="btn btn-download">Download Button</button>
+    <button type="button" class="btn btn-upload">Upload Button</button>
+</body>
+
+</html>

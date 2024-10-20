@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Me</title>
+
+    <style>
+        body {
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            width: 200px;
+            height: 60px;
+            background: linear-gradient(
+                60deg,
+                blue,
+                skyblue,
+                blue,
+                skyblue);
+            color: #fff;
+            background-size: 300%;
+            font-size: 25px;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+
+            transition: background-position .3s ease-in-out;
+
+        }
+
+        .btn:hover{
+            background-position: right;
+
+        }
+
+        .btn:active {
+            box-shadow: 0 1px 15px rgba(0, 0, 0, 0.4);
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" class="btn">Hover Me</button>
+</body>
+
+</html>
