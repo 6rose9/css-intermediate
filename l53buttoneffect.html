@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Me</title>
+
+    <style>
+        body {
+            height: 100vh;
+         
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            background-color: steelblue;
+            color: #fff;
+            padding: 12px 40px;
+            font-size: 20px;
+            border: none;
+            
+            cursor: pointer;
+
+            position: relative;
+        }
+
+        .btn::before{
+            content: "";
+            font-size: 16px;
+            width: 24px;
+            height: 24px;
+    
+            border-left: 2px solid steelblue;
+            border-top: 2px solid steelblue;
+
+            position: absolute;
+            left:-5px;
+            top: -5px;
+
+            transition: all .3s;
+            
+        }
+
+        .btn::after{
+            content: "";
+            font-size: 16px;
+            width: 24px;
+            height: 24px;
+        
+            border-right: 2px solid steelblue;
+            border-bottom: 2px solid steelblue;
+
+            position: absolute;
+            right:-5px;
+            bottom: -5px;
+
+            transition: all .3s;
+            
+        }
+
+        .btn:hover::before{
+            left: calc(100% - 24px + 5px - 2px);
+            border-left: none;
+            border-right: 2px solid steelblue;
+        }
+
+        .btn:hover::after{
+            right: calc(100% - 21px);
+            border-right: none;
+            border-left: 2px solid steelblue;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <button type="button" class="btn">Add to Card</button>
+</body>
+
+</html>
