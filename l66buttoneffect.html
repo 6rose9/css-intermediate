@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Me</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            height: 100vh;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container{
+            width: 500px;
+            height: 500px;    
+        }
+
+        .heart {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+            position: relative;
+            transform: rotate(45deg);
+
+            opacity: 0;
+            animation: myani 5s linear infinite alternate-reverse;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: inherit;
+            height: inherit;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            transform: translate(-50%);
+        }
+
+        .heart::after {
+            transform: translateY(-50%);
+        }
+
+        @keyframes myani {
+            from {
+                opacity: 1;
+                top: 0;
+            }
+
+            to {
+                opacity: 0;
+                top: 100%;
+            }
+        }
+
+        .heart:nth-of-type(1) {
+            width: 10px;
+            height: 10px;
+            left: 7%;
+            animation-delay: .1s;
+        }
+
+        .heart:nth-of-type(2) {
+            width: 20px;
+            height: 20px;
+            left: -7%;
+            animation-delay: 2s;
+        }
+
+        .heart:nth-of-type(3) {
+            width: 16px;
+            height: 16px;
+            left: 40%;
+            animation-delay: 3s;
+        }
+
+        .heart:nth-of-type(4) {
+            width: 24px;
+            height: 24px;
+            left: 56%;
+            animation-delay: 4s;
+        }
+
+        .heart:nth-of-type(5) {
+            width: 14px;
+            height: 14px;
+            left: 30%;
+            animation-delay: 5s;
+        }
+
+        .heart:nth-of-type(6) {
+            width: 15px;
+            height: 15px;
+            left: -35%;
+            animation-delay: 6s;
+        }
+
+        .heart:nth-of-type(7) {
+            width: 13px;
+            height: 13px;
+            left:70%;
+            animation-delay: 7s;
+        }
+
+        .heart:nth-of-type(8) {
+            width: 15px;
+            height: 15px;
+            left: -25%;
+            animation-delay: 8s;
+        }
+
+        .heart:nth-of-type(9) {
+            width: 18px;
+            height: 18px;
+            left: 100%;
+            animation-delay: 9s;
+        }
+
+        .heart:nth-of-type(10) {
+            width: 14px;
+            height: 14px;
+            left: 130%;
+            animation-delay: 10s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Me</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            height: 100vh;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            width: 480px;
+            height: 120px;
+            background-color: steelblue;
+            color: #fff;
+            font-size: .5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+
+            position: relative;
+
+        }
+
+        .btn:hover{
+            color: #000;
+
+            background: linear-gradient(
+                135deg,
+                transparent,
+                #f4f4f4,
+                transparent,
+                #f4f4f4,
+                transparent,
+                #f4f4f4,
+                transparent,
+                #f4f4f4,
+                transparent,
+                #f4f4f4,
+                transparent,
+                #f4f4f4
+                
+            );
+
+            background-size: 30%;
+
+            animation: myani 5s infinite linear;
+        }
+
+        @keyframes myani {
+            to{
+                background-position: 400px 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <button type="button" class="btn">
+        Hover Me
+    </button>
+</body>
+
+</html>
